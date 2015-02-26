@@ -53,7 +53,7 @@ Compute the following method in an async task and await the result:
     	var sum = 0.0;
         var step = 1e-9;
 
-        for(var i = 0; i &lt; 1000000000; i++)
+        for(var i = 0; i < 1000000000; i++)
         {
             var x = (i + 0.5) * step;
             sum = sum + 4.0 / (1.0 + x * x); 
