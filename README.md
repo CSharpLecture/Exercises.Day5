@@ -4,23 +4,7 @@ Exercises and solutions for the fifth day.
 
 ## 21. Threads and communication
 
-Implement a multithreaded program. One thread, the worker thread, is doing some time consuming "work" (i.e. counts to infinity) and reports periodically its progress to another thread, the UI thread.
-
-A sample code for the worker thread (without reporting the progress) would be the following:
-
-    //Ping is available in System.Net.NetworkInformation
-    Ping ping = new Ping();
-
-    //Replace true with a statement if the loop should continue
-    while (true)
-    {
-        var reply = ping.Send("132.199.99.246");
-
-        //Use information from reply when reporting progress
-
-        //Just wait a bit before making sending again
-        Thread.Sleep(1000);
-    }
+Implement a multithreaded program. One thread, the worker thread, is doing some time consuming "work" (i.e. counts to infinity or calculates all prime numbers up to a maximum value) and reports periodically its progress (e.g. every new prime number) to another thread, the UI thread.
 
 One last thing: Avoid cross-threading exceptions!
 
